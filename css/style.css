@@ -1,0 +1,404 @@
+body {
+  font-family: 'Roboto Slab', serif;
+  background-color: #fafcff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #495f77;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #495f77;
+}
+
+p {
+  color: #495f77;
+}
+
+button {
+  font-family: 'Roboto Slab', serif;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
+  margin-left: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: #495f77;
+  opacity: 0.8;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo img {
+  margin-right: 7px;
+}
+
+.description {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+
+.supported-websites {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.supported-websites a {
+  display: inline-block;
+  margin: 0 3px;
+  cursor: default;
+}
+
+.url-input-wrapper {
+  position: relative;
+}
+
+.url-input-wrapper .progress-bar {
+  content: '';
+  display: none;
+  height: 4px;
+  width: 0%;
+  background-color: #a47eff;
+  box-shadow: 0px 0px 20px 1px #6425f8c9;
+  position: absolute;
+  bottom: 1px;
+  border-radius: 7px;
+  transition: all 0.5s;
+}
+
+#url-input {
+  height: 71px;
+  background: #fff;
+  border: 1px solid #c5d0d5;
+  box-sizing: border-box;
+  box-shadow: 0 10px 27px rgba(180, 188, 193, 0.35);
+  border-radius: 5px;
+  width: 100%;
+  font-size: 18px;
+  line-height: 22px;
+  color: #495f77;
+  font-style: normal;
+  font-weight: 400;
+  padding: 24px 24px 23px 20px;
+  mix-blend-mode: normal;
+  border: 3px solid #755bb4;
+}
+
+#url-input:focus {
+  box-shadow: 0 15px 50px #765bb43e;
+  outline: 0;
+}
+
+/* #download-btn {
+  border: 0;
+  color: white;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 98px;
+  z-index: 10;
+  text-align: center;
+  background: linear-gradient(178.47deg, #755bb4 -27.8%, #755bb4 180.72%);
+  border-radius: 5px;
+  height: 71px;
+  font-size: 28px;
+} */
+
+#clear-btn {
+  display: none;
+  border: 0;
+  color: #755bb4;
+  position: absolute;
+  right: 98px;
+  top: 0;
+  width: 70px;
+  z-index: 10;
+  text-align: center;
+  background: transparent;
+  height: 71px;
+  font-size: 28px;
+}
+
+.loading {
+  display: none;
+}
+
+#video-download {
+  position: absolute;
+  display: flex;
+  margin-top: 50px;
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: all 0.35s;
+  width: 100%;
+}
+
+#error-section {
+  display: none;
+  background-color: #fff2f2;
+  border: 1px solid #b77676;
+  padding: 20px;
+  border-radius: 5px;
+  color: #495f77;
+  margin-top: 20px;
+}
+
+#video-download.show {
+  position: relative;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#video-download .img-box {
+  width: 50%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 5px 0 0 5px;
+}
+
+#video-download .formats-box {
+  width: 50%;
+  background-color: white;
+  border: 1px solid rgba(73, 95, 119, 0.15);
+  box-sizing: border-box;
+  box-shadow: 10px 0 50px hsla(0, 0%, 39.6%, 0.06);
+  border-radius: 0 5px 5px 0;
+  padding: 11px 13px 13px;
+}
+
+#video-download .quality-btn {
+  background-color: #755bb4;
+  border: 0;
+  padding: 7px 14px;
+  color: white;
+  border-radius: 5px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+#video-download .quality-btn i {
+  margin-right: 3px;
+}
+
+.features {
+  margin-top: 70px;
+  margin-bottom: 100px;
+}
+
+.steps-section {
+  margin-top: 70px;
+  margin-bottom: 100px;
+}
+
+.steps-section .img {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.steps-section .img img {
+  /* max-width: 100%; */
+}
+
+#contact-us form {
+  margin-left: 70px;
+}
+
+footer {
+  padding: 80px 0;
+  background-color: white;
+  border-top: 1px solid #e4eaf3;
+}
+
+footer.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+footer.transparent {
+  background-color: transparent;
+}
+
+footer ul {
+  display: flex;
+}
+
+footer ul li {
+  margin-left: 30px;
+}
+
+footer ul li a {
+  display: inline-block;
+}
+
+footer .footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#ad-container {
+  display: flex;
+  justify-content: center;
+}
+
+iframe {
+  margin-top: 40px;
+  padding: 0 2px;
+  box-sizing: border-box;
+}
+
+.show-on-mobile {
+  display: none;
+}
+
+.hide-on-mobile {
+  display: block;
+}
+
+@media (max-width: 540px) {
+  .show-on-mobile {
+    display: block;
+  }
+
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .container {
+    padding: 0 2px;
+    text-align: center;
+  }
+
+  #download-btn {
+    /* width: 50px;
+    height: 60px;
+    font-size: 20px; */
+  }
+
+  #clear-btn {
+    width: 50px;
+    height: 60px;
+    font-size: 20px;
+    right: 50px;
+  }
+
+  #url-input {
+    height: 60px;
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  #ad-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  #ad-container iframe {
+    margin: unset;
+    margin-top: 20px;
+    padding: 0 2px;
+  }
+
+  .navbar {
+    justify-content: center;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  footer ul {
+    flex-direction: column;
+  }
+
+  footer ul li {
+    margin-left: 0px;
+    margin: 5px 0;
+  }
+
+  footer .footer-wrapper .logo {
+    margin-bottom: 30px;
+  }
+
+  footer .footer-wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: unset;
+  }
+}
+
+#video-download .quality-btn {
+  text-decoration: none;
+}
+
+#url-input,
+#download-btn {
+  z-index: 1000000000;
+}
+
+.jkit-menu-wrapper {
+
+  z-index: 1000000000000000 !important;
+}
+
+.elementor-container {
+  z-index: 0 !important;
+}
+
+@media (max-width: 1200px) {
+  .elementor-61 .elementor-element.elementor-element-3b8c59 img {
+    width: 180px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .elementor-68 .elementor-element.elementor-element-a6ba12f img {
+    width: 220px !important;
+    margin-bottom: 30px;
+  }
+}
+
+.elementor-7 .elementor-element.elementor-element-c1a3db3 {
+  width: 100% !important;
+  max-width: 100% !important;
+}
