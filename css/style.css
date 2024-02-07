@@ -402,3 +402,7 @@ iframe {
   width: 100% !important;
   max-width: 100% !important;
 }
+
+.elementor-7 .elementor-element.elementor-element-16eeb004 {
+  z-index: 10000000;
+}
